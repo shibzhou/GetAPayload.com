@@ -1,24 +1,20 @@
-import { useRef } from 'react'
+// components/LaunchTimeline/LaunchTimeline.tsx
+import React, { useRef } from 'react'
 import styles from './LaunchTimeline.module.css'
-import { format } from 'date-fns'
+import { format, parseISO } from 'date-fns'
 
-interface Launch {
+export interface Launch {
   id: string
   date: string
   name: string
   status: 'available' | 'booked'
 }
 
-// Dummy data––later you’ll replace with real API fetch
-const launches: Launch[] = [
-  { id: '1', date: '2025-05-01', name: 'Falcon 9 • Starlink Batch 40', status: 'available' },
-  { id: '2', date: '2025-05-10', name: 'Ariane 6 • SES-18', status: 'booked' },
-  { id: '3', date: '2025-05-20', name: 'Long March 8 • Earth Observation', status: 'available' },
-  { id: '4', date: '2025-06-02', name: 'Vulcan Centaur • LCRV Test', status: 'available' },
-  // …more
-]
+interface LaunchTimelineProps {
+  launches: Launch[]
+}
 
-export default function LaunchTimeline() {
+export default function LaunchTimeline({ launches }: LaunchTimelineProps) {
   const containerRef = useRef<HTMLDivElement>(null)
 
   const scroll = (dir: 'left' | 'right') => {
@@ -45,7 +41,20 @@ export default function LaunchTimeline() {
                 }}
               />
               <div className={styles.info}>
-                <span className={styles.date}>{format(new Date(l.date), 'MMM d, yyyy')}</span>
+                {(() => {
+                  if (typeof l.date !== 'string' || !l.date.trim()) {
+                    return <span className={styles.date}>TBA</span>
+                  }
+                  const parsed = parseISO(l.date)
+                  if (isNaN(parsed.getTime())) {
+                    return <span className={styles.date}>TBA</span>
+                  }
+                  return (
+                    <span className={styles.date}>
+                      {format(parsed, 'MMM d, yyyy')}
+                    </span>
+                  )
+                })()}
                 <span className={styles.name}>{l.name}</span>
                 <span className={styles.status}>
                   {l.status === 'available' ? 'Available' : 'Booked'}

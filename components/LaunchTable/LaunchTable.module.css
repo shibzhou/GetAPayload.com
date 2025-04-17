@@ -1,0 +1,57 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1f2833; /* dark background */
+    overflow-x: auto;
+    display: block; /* enable horizontal scroll on small screens */
+  }
+  
+  .caption {
+    caption-side: top;
+    text-align: left;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    color: var(--accent-neon);
+  }
+  
+  th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  thead th {
+    position: sticky;
+    top: 0;
+    background: #0b0c10;
+    z-index: 2;
+  }
+  
+  tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.02);
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    text-transform: capitalize;
+  }
+  
+  .available {
+    background-color: var(--status-available);
+    color: #0b0c10;
+  }
+  
+  .booked {
+    background-color: var(--status-booked);
+    color: #fff;
+  }
+  
+  .error, .loading {
+    padding: 2rem;
+    text-align: center;
+    color: var(--status-booked);
+  }
+  
