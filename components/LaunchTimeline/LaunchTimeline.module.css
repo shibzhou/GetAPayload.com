@@ -1,0 +1,81 @@
+.timelineSection {
+    padding: 4rem 2rem;
+    background: radial-gradient(circle at top, #1f2833 0%, #0b0c10 80%);
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--accent-neon);
+  }
+  
+  .wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navBtn {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--accent-neon);
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .timeline {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+  }
+  
+  .event {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 180px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.2s;
+  }
+  
+  .event:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.1);
+  }
+  
+  .dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-bottom: 0.75rem;
+  }
+  
+  .info {
+    text-align: center;
+  }
+  
+  .date {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .name {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .status {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--accent-neon);
+  }
+  

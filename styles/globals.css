@@ -1,0 +1,25 @@
+:root {
+    --bg-dark: #0b0c10;
+    --text-light: #c5c6c7;
+    --accent-neon: #66fcf1;
+    --status-available: #45a29e;
+    --status-booked: #c0392b;
+  }
+  
+  html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  a {
+    color: var(--accent-neon);
+    text-decoration: none;
+  }
+  

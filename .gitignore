@@ -3,36 +3,70 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/patches/
+.yarn/releases/
 
 # 🛠️ Next.js & Build Artifacts
 /.next/
 /out/
 /build/
 /dist/
+.next.cache/
 
 # 🔒 Environment & Secrets
 .env.local
 .env.*.local
+.env
+.env.production
+.env.development
+.env.test
 
 # 📊 Test Coverage
 /coverage/
+.nyc_output/
 
 # 💻 IDE & Editor Settings
 .vscode/
 /.idea/
+*.sublime-workspace
+*.sublime-project
 
 # 🖥️ OS Files
 .DS_Store
 Thumbs.db
+ehthumbs.db
+Icon?
+desktop.ini
 
 # 📦 Logs & Misc
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 .cache/
 logs/
-public/
+*.log
+
+# 🧪 Testing & Linting
+jest.config.js
+jest.setup.js
+.eslintcache
+*.tsbuildinfo
+
+# 🖼️ Public Assets (if auto-generated)
+public/static/
 
 # 🚀 Vercel
 .vercel/
 vercel/
+
+# 📁 Miscellaneous
+*.local
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
