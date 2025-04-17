@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import RealLaunchTimeline from '../components/LaunchTimeline/RealLaunchTimeline'
+import LaunchTable from '../components/LaunchTable/LaunchTable'
 
 export default function Home() {
   return (
@@ -33,7 +33,7 @@ export default function Home() {
       </section>
 
       {/* Timeline */}
-      <RealLaunchTimeline /> 
+      <LaunchTable />
 
     </>
   )
