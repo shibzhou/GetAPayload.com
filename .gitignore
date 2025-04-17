@@ -1,0 +1,38 @@
+# 🎯 Dependencies
+/node_modules/
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# 🛠️ Next.js & Build Artifacts
+/.next/
+/out/
+/build/
+/dist/
+
+# 🔒 Environment & Secrets
+.env.local
+.env.*.local
+
+# 📊 Test Coverage
+/coverage/
+
+# 💻 IDE & Editor Settings
+.vscode/
+/.idea/
+
+# 🖥️ OS Files
+.DS_Store
+Thumbs.db
+
+# 📦 Logs & Misc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.cache/
+logs/
+public/
+
+# 🚀 Vercel
+.vercel/
+vercel/

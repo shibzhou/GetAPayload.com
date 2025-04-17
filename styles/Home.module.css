@@ -1,0 +1,21 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .title {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: #555;
+    margin-top: 1rem;
+  }
+  
